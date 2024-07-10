@@ -34,7 +34,7 @@ const AddProduct = () => {
     );
 
     axios
-      .post("http://localhost:8080/api/product", formData, {
+      .post("http://e-commerce-env.eba-3fqbn8ha.eu-north-1.elasticbeanstalk.com/api/product", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },

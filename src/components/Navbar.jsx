@@ -21,7 +21,7 @@ const Navbar = ({ onSelectCategory, onSearch }) => {
 
   const fetchData = async (value) => {
     try {
-      const response = await axios.get("http://localhost:8080/api/products");
+      const response = await axios.get("http://e-commerce-env.eba-3fqbn8ha.eu-north-1.elasticbeanstalk.com/api/products");
       setSearchResults(response.data);
       console.log(response.data);
     } catch (error) {
@@ -35,7 +35,7 @@ const Navbar = ({ onSelectCategory, onSearch }) => {
       setShowSearchResults(true)
     try {
       const response = await axios.get(
-        `http://localhost:8080/api/products/search?keyword=${value}`
+        `http://e-commerce-env.eba-3fqbn8ha.eu-north-1.elasticbeanstalk.com/api/products/search?keyword=${value}`
       );
       setSearchResults(response.data);
       setNoResults(response.data.length === 0);
